@@ -37,5 +37,5 @@ class TestTouchAction:
         action.tap(el_search)
         action.perform()
 
-        action.scroll_from_element(el, 0, 4000).perform()
+        action.scroll_from_element(el, 0, 8000).perform()
         # sleep(3)
