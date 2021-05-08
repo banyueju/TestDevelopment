@@ -2,6 +2,7 @@
 __author__ = '伴月雎'
 __time__ = '2021/5/7 23:08'
 """
+from test_web_wechat.page.add_member import AddMemberPage
 from test_web_wechat.page.contact import ContactPage
 
 
@@ -22,4 +23,4 @@ class MainPage:
         跳转到添加成员页面
         :return:
         """
-        pass
+        return AddMemberPage()
