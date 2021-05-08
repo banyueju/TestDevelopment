@@ -21,7 +21,7 @@ class TestWework:
         # 在当前页面点击通讯录
         self.driver.find_element_by_css_selector('#menu_contacts > span').click()
         cookie = self.driver.get_cookies()
-        with open('data.yaml', 'w', encoding='UTF-8') as f:
+        with open('../data.yaml', 'w', encoding='UTF-8') as f:
             yaml.dump(cookie, f)
 
 
@@ -39,7 +39,7 @@ def test_cookie_v2():
     driver = webdriver.Chrome()
     driver.get('https://work.weixin.qq.com/wework_admin/loginpage_wx')
     driver.implicitly_wait(10)
-    with open('data.yaml',encoding='UTF-8') as f:
+    with open('../data.yaml', encoding='UTF-8') as f:
         yaml_data = yaml.safe_load(f)
         for cookie in yaml_data:
             driver.add_cookie(cookie)
