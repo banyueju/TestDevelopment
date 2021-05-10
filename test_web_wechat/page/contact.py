@@ -5,6 +5,6 @@ __time__ = '2021/5/7 23:09'
 
 
 class ContactPage:
-
     def get_contact_list(self):
-        pass
+        name_list = []
+        return name_list

@@ -4,6 +4,8 @@ __time__ = '2021/5/7 23:08'
 """
 from test_web_wechat.page.add_member import AddMemberPage
 from test_web_wechat.page.contact import ContactPage
+import yaml
+from selenium import webdriver
 
 
 class MainPage:

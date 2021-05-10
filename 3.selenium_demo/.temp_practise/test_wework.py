@@ -8,9 +8,6 @@ from time import sleep
 
 
 # 复用浏览器 Chrome --remote-debugging-port=9222
-from selenium.common.exceptions import ElementNotInteractableException
-
-
 class TestWework:
     def test_wework(self):
         opt = webdriver.ChromeOptions()
@@ -44,10 +41,7 @@ def test_cookie_v2():
         for cookie in yaml_data:
             driver.add_cookie(cookie)
     driver.get('https://work.weixin.qq.com/wework_admin/frame#contacts')
-    try:
-        driver.find_element_by_xpath('//*[@id="js_contacts42"]/div/div[2]/div/div[2]/div[2]/div[2]/a[1]').click()
-    except ElementNotInteractableException:
-        driver.find_element_by_link_text("添加成员").click()
+    driver.find_element_by_link_text("添加成员").click()
     # 填写姓名
     driver.find_element_by_xpath('//*[@name="username"]').send_keys("Hogwarts_tester")
     # 填写账号
